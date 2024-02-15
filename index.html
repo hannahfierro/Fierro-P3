@@ -14,7 +14,6 @@
 		<!-- Javascript Framework (e.g., vue.js) (ADD HERE) -->
 	</head>
 	
-
 	<body>
 		<div id="vue_app" class="container" v-app>
 	
@@ -40,8 +39,8 @@
 							<p class="title">{{movie.title}} ({{movie.country}}) </p>
 							<p class="score"><i class="bi bi-star" aria-hidden="true"></i> {{movie.iscore}} </p>
 							<p class="runtime">Runtime: {{ timeText(movie.runtime) }}</p>
-							<p class="released">Released: {{ getMonthText(movie.released) }} | Rated: {{ movir.rating }}</p>
-							<p class="websites">Websites: <a> :href="movie.imdb" target="blank"> imdb</a> | <a> :href="movie.website" target="blank">website</a></p>
+							<p class="released">Released: {{ getMonthText(movie.released) }} | Rated: {{ movie.rating }}</p>
+							<p class="websites">Websites: <a :href="movie.imdb" target="blank">imdb</a> | <a :href="movie.website" target="blank">website</a></p>
 	
 							<br>
 
@@ -58,7 +57,7 @@
 			<div class="footer">
 				<div class="container">
 					<a id="github" class="btn btn-lg btn-warning">
-						<i class="bi bi-github me-2"></i>%owner%
+						<i class="bi bi-github me-2"></i>owner
 					</a>
 				</div>
 			</div>
@@ -66,5 +65,21 @@
 	
 		<!-- This loads the Vue.js code -->
 		<script type="text/javascript" src="site.js"></script>
+		<script>
+			// Define your Vue instance and data here
+			var app = new Vue({
+				el: '#vue_app',
+				data: {
+					// Define your movies data here
+					movies: [
+						// Your movie objects here
+					]
+				},
+				methods: {
+					// Define your methods here
+				}
+			});
+		</script>
 	</body>
 </html>
+
