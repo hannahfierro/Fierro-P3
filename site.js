@@ -80,5 +80,28 @@ const vue_app = Vue.createApp({
   
     },
   
+    like(index) {
+        this.movies[index].likes++
+    },
+    dislike(index){
+        this.movies[index].dislikes++
+    },
+    posterClick(index) {
+        let length = this.movies[index].posters.length
+
+        this.movies[index].posterindex >= length){
+            this.movies[index].posterindex = 0
+        }
+
+},
+timeText(minutes){
+    let hr = Math.trunc(minutes/60)
+    let min = minutes - 60*hr
+    return hr + "h" +  min + "m"
+}
+
+}
+
+})
   vue_app.mount("#vue_app");
   
