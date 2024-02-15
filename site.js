@@ -40,7 +40,8 @@ const vue_app = Vue.createApp({
           };
       },
       methods: {
-          if(dateArray[1] == 1){
+        getMonthText(dateArray){
+        if(dateArray[1] == 1){
             return "January" + dateArray[2] + "," + dateArray[0]
           }
           if(dateArray[1] == 2){
