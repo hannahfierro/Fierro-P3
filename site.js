@@ -86,10 +86,11 @@ const vue_app = Vue.createApp({
     dislike(index){
         this.movies[index].dislikes++
     },
-    posterClick(index) {
+    posterClick(index){
         let length = this.movies[index].posters.length
 
-        this.movies[index].posterindex >= length){
+        this.movies[index].posterindex++
+        if(this.movies[index].posterindex >= length){
             this.movies[index].posterindex = 0
         }
 
