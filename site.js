@@ -23,23 +23,26 @@
 
 const vue_app = Vue.createApp({
       // This automatically imports your movies.json file and puts it into
-      //   the variable: movies
+      // the variable: movies
       created () {
-            fetch('movies.json').then(response => response.json()).then(json => {
-                  this.movies = json
-            })
+          fetch('movies.json').then(response => response.json()).then(json => {
+              this.movies = json;
+          });
       },
       data() {
-        return {
-            // This holds your movies.json data.
-            movies: [],
-            /* ADD ADDITIONAL VARIABLES FOR STEP 3 HERE */
-         
-      }
-    },
+          return {
+              // This holds your movies.json data.
+              movies: [],
+              // Additional variables for step 3
+              title: "IMDB + Hannah Fierro's Top 8 Movies", // Replace YourName with your actual name
+              owner: "Hannah Fierro", // Replace Your Name with your actual name
+              github: "https://github.com/hannahfierro/Fierro-P3" // Replace yourusername with your actual GitHub username
+          };
+      },
       methods: {
-            /* ADD FUNCTIONS/METHODS FOR STEP 7 HERE */
+          // ADD FUNCTIONS/METHODS FOR STEP 7 HERE
       }
-})
-
-vue_app.mount("#vue_app")
+  });
+  
+  vue_app.mount("#vue_app");
+  
